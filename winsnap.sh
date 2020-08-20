@@ -7,6 +7,21 @@ BORDER_OFFSET_X=$(grep "BORDER_OFFSET_X=" ~/.config/sxhkd/winvars | rev | cut -d
 BORDER_OFFSET_Y=$(grep "BORDER_OFFSET_Y=" ~/.config/sxhkd/winvars | rev | cut -d'=' -f1 | rev)
 GAPS=$(grep "GAPS=" ~/.config/sxhkd/winvars | rev | cut -d'=' -f1 | rev)
 
+######################
+#     One Window     #
+######################
+
+if [ $1 = "full" ]; then
+	xdotool getactivewindow \
+		windowsize \
+			$(( $SCREEN_WIDTH - $GAPS*2 - $BORDER_OFFSET_X )) \
+			$(( $SCREEN_HEIGHT - $POLYBAR_Y - $GAPS*2 - $BORDER_OFFSET_Y )) \
+		windowmove \
+			$GAPS \
+			$(( $GAPS + $POLYBAR_Y ))
+	exit
+fi
+
 #####################
 #     50% Snaps     #
 #####################

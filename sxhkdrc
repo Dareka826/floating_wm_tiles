@@ -45,6 +45,8 @@ alt + ctrl + shift + {Left,Down,Up,Right}
 	~/.config/sxhkd/winmove.sh {-1 0,0 1,0 -1,1 0}
 
 # Snap windows to predetermined positions
+super + alt + Return
+	~/.config/sxhkd/winsnap.sh full
 alt + {Left,Down,Up,Right}
 	~/.config/sxhkd/winsnap.sh {left,down,up,right}
 super + {a,s,z,x}
