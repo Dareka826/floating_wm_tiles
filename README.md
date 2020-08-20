@@ -9,6 +9,7 @@ Requirements:
 - xdo
 - wmctrl
 - sxhkd
+- xorg-xwininfo
 
 I created these files, because I wanted organization like in tiling wm but with decorative borders of floating wm.
 
