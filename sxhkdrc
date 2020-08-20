@@ -58,6 +58,14 @@ super + ctrl + shift + {q,a,z,w,s,x}
 super + {plus,minus}
 	xdo {raise,lower}
 
+# Cycle through open windows
+alt + shift + c
+	~/.config/sxhkd/wincycle.sh
+
+# Show all windows
+alt + shift + h
+	~/.config/sxhkd/winshow.sh
+
 # Resize window
 super + shift + {Left,Down,Up,Right}
 	xdo resize {-w -20,-h +20,-h -20,-w +20}
