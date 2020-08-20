@@ -11,3 +11,5 @@ Requirements:
 - sxhkd
 
 I created these files, because I wanted organization like in tiling wm but with decorative borders of floating wm.
+
+There also is workspaces.sh, which I use to show the workspaces in polybar.
