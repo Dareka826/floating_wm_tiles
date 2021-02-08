@@ -59,6 +59,18 @@ case "$1" in
 # |    |    |
 # +----+----+
 
+"vhalfl") winssp \
+	$(( PADDING_LEFT + GAPS )) \
+	$(( PADDING_TOP  + GAPS )) \
+	$(( ( SWWP - GAPS ) / 2 )) \
+	$(( SHWP - 2 * GAPS )) ;;
+
+"vhalfr") winssp \
+	$(( PADDING_LEFT + GAPS )) \
+	$(( PADDING_TOP  + GAPS )) \
+	$(( ( SWWP - GAPS ) / 2 )) \
+	$(( SHWP - 2 * GAPS )) ;;
+
 # +---------+
 # |         |
 # +---------+
