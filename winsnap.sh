@@ -41,6 +41,36 @@ SHWP=$(( SCREEN_H - PADDING_TOP  - PADDING_BOTTOM - 2 * GAPS ))
 
 case "$1" in
 
+"help")
+	echo "winsnap.sh [snap position]"
+	echo ""
+	echo "Snap positions:"
+	echo "  fullwin     One window layout"
+	echo ""
+	echo "  vhalfl      2-window vertical split (left)"
+	echo "  vhalfr      2-window vertical split (right)"
+	echo ""
+	echo "  hhalft      2-window horizontal split (top)"
+	echo "  hhalfb      2-window horizontal split (bottom)"
+	echo ""
+	echo "  4gridlt     4-window grid (left top)"
+	echo "  4gridrt     4-window grid (right top)"
+	echo "  4gridlb     4-window grid (left bottom)"
+	echo "  4gridrb     4-window grid (right bottom)"
+	echo ""
+	echo "  3vgridl     3-window vertical split (left)"
+	echo "  3vgridm     3-window vertical split (middle)"
+	echo "  3vgridr     3-window vertical split (right)"
+	echo ""
+	echo "  6hgridtl    3x2 layout (top left)"
+	echo "  6hgridtm    3x2 layout (top middle)"
+	echo "  6hgridtr    3x2 layout (top right)"
+	echo "  6hgridbl    3x2 layout (bottom left)"
+	echo "  6hgridbm    3x2 layout (bottom middle)"
+	echo "  6hgridbr    3x2 layout (bottom right)"
+	echo ""
+	;;
+
 # +---------+
 # |         |
 # |         |
