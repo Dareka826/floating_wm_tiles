@@ -2,6 +2,7 @@
 
 Requirements:
 - xdotool
+- a shell with arithmetic expansion under /bin/sh
 
 ## Implemented layouts:
 
