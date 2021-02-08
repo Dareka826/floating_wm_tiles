@@ -160,4 +160,47 @@ case "$1" in
 # |   |   |   |
 # +---+---+---+
 
+# 6-grid horizontal top left
+"6hgridtl") winssp \
+	$(( PADDING_LEFT + GAPS )) \
+	$(( PADDING_TOP  + GAPS )) \
+	$(( ( SWWP - 2 * GAPS ) / 3 )) \
+	$(( ( SHWP - GAPS ) / 2 )) ;;
+
+# 6-grid horizontal top middle
+"6hgridtm") winssp \
+	$(( PADDING_LEFT + 2 * GAPS + ( SWWP - 2 * GAPS ) / 3 )) \
+	$(( PADDING_TOP  + GAPS )) \
+	$(( ( SWWP - 2 * GAPS ) / 3 )) \
+	$(( ( SHWP - GAPS ) / 2 )) ;;
+
+# 6-grid horizontal top right
+"6hgridtr") winssp \
+	$(( PADDING_LEFT + 3 * GAPS + 2 * ( SWWP - 2 * GAPS ) / 3 )) \
+	$(( PADDING_TOP  + GAPS )) \
+	$(( ( SWWP - 2 * GAPS ) / 3 )) \
+	$(( ( SHWP - GAPS ) / 2 )) ;;
+
+# 6-grid horizontal bottom left
+"6hgridbl") winssp \
+	$(( PADDING_LEFT + GAPS )) \
+	$(( PADDING_TOP  + 2 * GAPS + ( SHWP - GAPS ) / 2 )) \
+	$(( ( SWWP - 2 * GAPS ) / 3 )) \
+	$(( ( SHWP - GAPS ) / 2 )) ;;
+
+# 6-grid horizontal bottom middle
+"6hgridbm") winssp \
+	$(( PADDING_LEFT + 2 * GAPS + ( SWWP - 2 * GAPS ) / 3 )) \
+	$(( PADDING_TOP  + 2 * GAPS + ( SHWP - GAPS ) / 2 )) \
+	$(( ( SWWP - 2 * GAPS ) / 3 )) \
+	$(( ( SHWP - GAPS ) / 2 )) ;;
+
+# 6-grid horizontal bottom right
+"6hgridbr") winssp \
+	$(( PADDING_LEFT + 3 * GAPS + 2 * ( SWWP - 2 * GAPS ) / 3 )) \
+	$(( PADDING_TOP  + 2 * GAPS + ( SHWP - GAPS ) / 2 )) \
+	$(( ( SWWP - 2 * GAPS ) / 3 )) \
+	$(( ( SHWP - GAPS ) / 2 )) ;;
+
 esac
+
