@@ -1,23 +1,23 @@
 #!/bin/sh
 
 # Screen size for calculations
-SCREEN_W=
-SCREEN_H=
+SCREEN_W=1920
+SCREEN_H=1080
 
 # Padding from screen sides (for things like docks)
-PADDING_TOP=
-PADDING_BOTTOM=
-PADDING_LEFT=
-PADDING_RIGHT=
+PADDING_TOP=14
+PADDING_BOTTOM=0
+PADDING_LEFT=0
+PADDING_RIGHT=0
 
 # Gap size
-GAPS=
+GAPS=10
 
 # Window decorations introduce offset
-WIN_DECOR_SIZE_TOP=
-WIN_DECOR_SIZE_BOTTOM=
-WIN_DECOR_SIZE_LEFT=
-WIN_DECOR_SIZE_RIGHT=
+WIN_DECOR_SIZE_TOP=2
+WIN_DECOR_SIZE_BOTTOM=2
+WIN_DECOR_SIZE_LEFT=2
+WIN_DECOR_SIZE_RIGHT=2
 
 # Window set size & position
 # Args:
