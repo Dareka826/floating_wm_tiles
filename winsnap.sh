@@ -59,12 +59,14 @@ case "$1" in
 # |    |    |
 # +----+----+
 
+# Vertical half left
 "vhalfl") winssp \
 	$(( PADDING_LEFT + GAPS )) \
 	$(( PADDING_TOP  + GAPS )) \
 	$(( ( SWWP - GAPS ) / 2 )) \
 	$SHWP ;;
 
+# Vertical half right
 "vhalfr") winssp \
 	$(( PADDING_LEFT + ( SWWP + 3 * GAPS ) / 2 )) \
 	$(( PADDING_TOP  + GAPS )) \
@@ -76,6 +78,20 @@ case "$1" in
 # +---------+
 # |         |
 # +---------+
+
+# Horizontal half top
+"hhalft") winssp \
+	$(( PADDING_LEFT + GAPS )) \
+	$(( PADDING_TOP  + GAPS )) \
+	$SWWP \
+	$(( ( SHWP - GAPS ) / 2 )) ;;
+
+# Horizontal half bottom
+"hhalfb") winssp \
+	$(( PADDING_LEFT + GAPS )) \
+	$(( PADDING_TOP  + ( SHWP + 3 * GAPS ) / 2 )) \
+	$SWWP \
+	$(( ( SHWP - GAPS ) / 2 )) ;;
 
 # +----+----+
 # |    |    |
