@@ -35,9 +35,9 @@ winssp() {
 		windowmove $1 $2
 }
 
-# Screen width and height without padding to save calculations later
-SWWP=$(( SCREEN_W - PADDING_LEFT - PADDING_RIGHT  ))
-SHWP=$(( SCREEN_H - PADDING_TOP  - PADDING_BOTTOM ))
+# Screen width and height without padding and outer gaps
+SWWP=$(( SCREEN_W - PADDING_LEFT - PADDING_RIGHT  - 2 * GAPS ))
+SHWP=$(( SCREEN_H - PADDING_TOP  - PADDING_BOTTOM - 2 * GAPS ))
 
 case "$1" in
 
@@ -50,8 +50,8 @@ case "$1" in
 "fullwin") winssp \
 	$(( PADDING_LEFT + GAPS )) \
 	$(( PADDING_TOP  + GAPS )) \
-	$(( SWWP - 2 * GAPS )) \
-	$(( SHWP - 2 * GAPS )) ;;
+	$(( SWWP )) \
+	$(( SHWP )) ;;
 
 # +----+----+
 # |    |    |
@@ -63,13 +63,13 @@ case "$1" in
 	$(( PADDING_LEFT + GAPS )) \
 	$(( PADDING_TOP  + GAPS )) \
 	$(( ( SWWP - GAPS ) / 2 )) \
-	$(( SHWP - 2 * GAPS )) ;;
+	$SHWP ;;
 
 "vhalfr") winssp \
 	$(( PADDING_LEFT + GAPS + ( SWWP - GAPS ) / 2 + GAPS )) \
 	$(( PADDING_TOP  + GAPS )) \
 	$(( ( SWWP - GAPS ) / 2 )) \
-	$(( SHWP - 2 * GAPS )) ;;
+	$SHWP ;;
 
 # +---------+
 # |         |
