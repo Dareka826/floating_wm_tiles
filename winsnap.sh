@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# If no arguments, re-run self with help
+[ $# = 0 ] && exec $0 help
+
 # Screen size for calculations
 SCREEN_W=1920
 SCREEN_H=1080
