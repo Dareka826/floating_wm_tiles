@@ -29,7 +29,9 @@ winssp() {
 	[ $# -lt 4 ] && return 1 # Exit if not enough args
 
 	xdotool getactivewindow \
-		windowsize $3 $4 \
+		windowsize \
+			$(( $3 - WIN_DECOR_SIZE_LEFT - WIN_DECOR_SIZE_RIGHT  )) \
+			$(( $4 - WIN_DECOR_SIZE_TOP  - WIN_DECOR_SIZE_BOTTOM )) \
 		windowmove $1 $2
 }
 
@@ -43,10 +45,10 @@ case "$1" in
 # +---------+
 
 "fullwin") winssp \
-	$(( PADDING_LEFT + GAPS + WIN_DECOR_SIZE_LEFT )) \
-	$(( PADDING_TOP  + GAPS + WIN_DECOR_SIZE_TOP  )) \
-	$(( SCREEN_W - PADDING_LEFT - PADDING_RIGHT - 2 * GAPS - WIN_DECOR_SIZE_LEFT - WIN_DECOR_SIZE_RIGHT )) \
-	$(( SCREEN_H - PADDING_TOP - PADDING_BOTTOM - 2 * GAPS - WIN_DECOR_SIZE_TOP -WIN_DECOR_SIZE_BOTTOM )) ;;
+	$(( PADDING_LEFT + GAPS )) \
+	$(( PADDING_TOP  + GAPS )) \
+	$(( SCREEN_W - PADDING_LEFT - PADDING_RIGHT - 2 * GAPS )) \
+	$(( SCREEN_H - PADDING_TOP - PADDING_BOTTOM - 2 * GAPS )) ;;
 
 # +----+----+
 # |    |    |
