@@ -104,34 +104,55 @@ case "$1" in
 	$(( PADDING_LEFT + GAPS )) \
 	$(( PADDING_TOP  + GAPS )) \
 	$(( ( SWWP - GAPS ) / 2 )) \
-	$(( ( SHWP - GAPS ) / 2 ));;
+	$(( ( SHWP - GAPS ) / 2 )) ;;
 
 # 4-grid left bottom
 "4gridlb") winssp \
 	$(( PADDING_LEFT + GAPS )) \
 	$(( PADDING_TOP  + ( SHWP + 3 * GAPS ) / 2 )) \
 	$(( ( SWWP - GAPS ) / 2 )) \
-	$(( ( SHWP - GAPS ) / 2 ));;
+	$(( ( SHWP - GAPS ) / 2 )) ;;
 
 # 4-grid right top
 "4gridrt") winssp \
 	$(( PADDING_LEFT + ( SWWP + 3 * GAPS ) / 2 )) \
 	$(( PADDING_TOP  + GAPS )) \
 	$(( ( SWWP - GAPS ) / 2 )) \
-	$(( ( SHWP - GAPS ) / 2 ));;
+	$(( ( SHWP - GAPS ) / 2 )) ;;
 
 # 4-grid right bottom
 "4gridrb") winssp \
 	$(( PADDING_LEFT + ( SWWP + 3 * GAPS ) / 2 )) \
 	$(( PADDING_TOP  + ( SHWP + 3 * GAPS ) / 2 )) \
 	$(( ( SWWP - GAPS ) / 2 )) \
-	$(( ( SHWP - GAPS ) / 2 ));;
+	$(( ( SHWP - GAPS ) / 2 )) ;;
 
 # +---+---+---+
 # |   |   |   |
 # |   |   |   |
 # |   |   |   |
 # +---+---+---+
+
+# 3-grid vertical left
+"3vgridl") winssp \
+	$(( PADDING_LEFT + GAPS )) \
+	$(( PADDING_TOP  + GAPS )) \
+	$(( ( SWWP - 2 * GAPS ) / 3 ))
+	$SHWP ;;
+
+# 3-grid vertical middle
+"3vgridm") winssp \
+	$(( PADDING_LEFT + 2 * GAPS + ( SWWP - 2 * GAPS ) / 3 )) \
+	$(( PADDING_TOP  + GAPS )) \
+	$(( ( SWWP - 2 * GAPS ) / 3 ))
+	$SHWP ;;
+
+# 3-grid vertical right
+"3vgridr") winssp \
+	$(( PADDING_LEFT + 3 * GAPS + 2 * ( SWWP - 2 * GAPS ) / 3 )) \
+	$(( PADDING_TOP  + GAPS )) \
+	$(( ( SWWP - 2 * GAPS ) / 3 ))
+	$SHWP ;;
 
 # +---+---+---+
 # |   |   |   |
