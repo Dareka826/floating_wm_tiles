@@ -48,22 +48,23 @@ case "$1" in
 	echo "winsnap.sh [snap position]"
 	echo ""
 	echo "Snap positions:"
-	echo "  fullwin     One window layout"
+	echo "   fullwin    One window layout"
+	echo "    center    Center window without changing size"
 	echo ""
-	echo "  vhalfl      2-window vertical split (left)"
-	echo "  vhalfr      2-window vertical split (right)"
+	echo "    vhalfl    2-window vertical split (left)"
+	echo "    vhalfr    2-window vertical split (right)"
 	echo ""
-	echo "  hhalft      2-window horizontal split (top)"
-	echo "  hhalfb      2-window horizontal split (bottom)"
+	echo "    hhalft    2-window horizontal split (top)"
+	echo "    hhalfb    2-window horizontal split (bottom)"
 	echo ""
-	echo "  4gridlt     4-window grid (left top)"
-	echo "  4gridrt     4-window grid (right top)"
-	echo "  4gridlb     4-window grid (left bottom)"
-	echo "  4gridrb     4-window grid (right bottom)"
+	echo "   4gridlt    4-window grid (left top)"
+	echo "   4gridrt    4-window grid (right top)"
+	echo "   4gridlb    4-window grid (left bottom)"
+	echo "   4gridrb    4-window grid (right bottom)"
 	echo ""
-	echo "  3vgridl     3-window vertical split (left)"
-	echo "  3vgridm     3-window vertical split (middle)"
-	echo "  3vgridr     3-window vertical split (right)"
+	echo "   3vgridl    3-window vertical split (left)"
+	echo "   3vgridm    3-window vertical split (middle)"
+	echo "   3vgridr    3-window vertical split (right)"
 	echo ""
 	echo "  6hgridtl    3x2 layout (top left)"
 	echo "  6hgridtm    3x2 layout (top middle)"
@@ -72,6 +73,21 @@ case "$1" in
 	echo "  6hgridbm    3x2 layout (bottom middle)"
 	echo "  6hgridbr    3x2 layout (bottom right)"
 	echo ""
+	;;
+
+"center")
+	WIN_SIZE=$(xdotool getactivewindow getwindowgeometry \
+		| grep -o "[0-9]*x[0-9]*")
+
+	WIN_W=$(echo $WIN_SIZE | cut -dx -f1)
+	WIN_H=$(echo $WIN_SIZE | cut -dx -f2)
+
+	ACTUAL_WIN_W=$(( WIN_W + WIN_DECOR_SIZE_LEFT + WIN_DECOR_SIZE_RIGHT  ))
+	ACTUAL_WIN_H=$(( WIN_H + WIN_DECOR_SIZE_TOP  + WIN_DECOR_SIZE_BOTTOM ))
+
+	xdotool getactivewindow windowmove \
+		$(( PADDING_LEFT + ( SCREEN_W - PADDING_LEFT - PADDING_RIGHT  - ACTUAL_WIN_W ) / 2 )) \
+		$(( PADDING_TOP  + ( SCREEN_H - PADDING_TOP  - PADDING_BOTTOM - ACTUAL_WIN_H ) / 2 ))
 	;;
 
 # +---------+
