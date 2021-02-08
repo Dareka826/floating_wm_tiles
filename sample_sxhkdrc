@@ -1,0 +1,39 @@
+super + Return
+	alacritty
+
+super + z
+	surf "ddg.gg"
+
+super + shift + e
+	pkill xfwm4
+
+super {_,+ ctrl} + shift + q
+	xdotool getactivewindow window{close,kill}
+
+super + shift + r
+	pkill -SIGUSR1 sxhkd
+
+# full one window / center
+super {_,+ shift} + m
+	winsnap.sh {fullwin,center}
+
+# vertical half
+super + {h,l}
+	winsnap.sh vhalf{l,r}
+
+# horizontal half
+super + {j,k}
+	winsnap.sh hhalf{b,t}
+
+# 4grid
+super + shift + {h,j,k,l}
+	winsnap.sh 4grid{lt,lb,rt,rb}
+
+# 3grid vertical
+super + {z,x,c}
+	winsnap.sh 3vgrid{l,m,r}
+
+# 6grid horizontal
+super + shift + {a,s,d,z,x,c}
+	winsnap.sh 6hgrid{tl,tm,tr,bl,bm,br}
+
