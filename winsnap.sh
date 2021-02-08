@@ -109,21 +109,21 @@ case "$1" in
 # 4-grid left bottom
 "4gridlb") winssp \
 	$(( PADDING_LEFT + GAPS )) \
-	$(( PADDING_TOP  + ( SHHP + 3 * GAPS ) / 2 )) \
+	$(( PADDING_TOP  + ( SHWP + 3 * GAPS ) / 2 )) \
 	$(( ( SWWP - GAPS ) / 2 )) \
 	$(( ( SHWP - GAPS ) / 2 ));;
 
 # 4-grid right top
 "4gridrt") winssp \
-	$(( PADDING_LEFT + ( SHWP + 3 * GAPS ) / 2 )) \
+	$(( PADDING_LEFT + ( SWWP + 3 * GAPS ) / 2 )) \
 	$(( PADDING_TOP  + GAPS )) \
 	$(( ( SWWP - GAPS ) / 2 )) \
 	$(( ( SHWP - GAPS ) / 2 ));;
 
 # 4-grid right bottom
 "4gridrb") winssp \
-	$(( PADDING_LEFT + ( SHWP + 3 * GAPS ) / 2 )) \
-	$(( PADDING_TOP  + ( SHHP + 3 * GAPS ) / 2 )) \
+	$(( PADDING_LEFT + ( SWWP + 3 * GAPS ) / 2 )) \
+	$(( PADDING_TOP  + ( SHWP + 3 * GAPS ) / 2 )) \
 	$(( ( SWWP - GAPS ) / 2 )) \
 	$(( ( SHWP - GAPS ) / 2 ));;
 
