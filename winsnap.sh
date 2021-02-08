@@ -99,6 +99,34 @@ case "$1" in
 # |    |    |
 # +----+----+
 
+# 4-grid left top
+"4gridlt") winssp \
+	$(( PADDING_LEFT + GAPS )) \
+	$(( PADDING_TOP  + GAPS )) \
+	$(( ( SHWP - GAPS ) / 2 )) \
+	$(( ( SHHP - GAPS ) / 2 ));;
+
+# 4-grid left bottom
+"4gridlb") winssp \
+	$(( PADDING_LEFT + GAPS )) \
+	$(( PADDING_TOP  + ( SHHP + 3 * GAPS ) / 2 )) \
+	$(( ( SHWP - GAPS ) / 2 )) \
+	$(( ( SHHP - GAPS ) / 2 ));;
+
+# 4-grid right top
+"4gridrt") winssp \
+	$(( PADDING_LEFT + ( SHWP + 3 * GAPS ) / 2 )) \
+	$(( PADDING_TOP  + GAPS )) \
+	$(( ( SHWP - GAPS ) / 2 )) \
+	$(( ( SHHP - GAPS ) / 2 ));;
+
+# 4-grid right bottom
+"4gridrb") winssp \
+	$(( PADDING_LEFT + ( SHWP + 3 * GAPS ) / 2 )) \
+	$(( PADDING_TOP  + ( SHHP + 3 * GAPS ) / 2 )) \
+	$(( ( SHWP - GAPS ) / 2 )) \
+	$(( ( SHHP - GAPS ) / 2 ));;
+
 # +---+---+---+
 # |   |   |   |
 # |   |   |   |
