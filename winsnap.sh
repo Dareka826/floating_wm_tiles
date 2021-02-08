@@ -66,7 +66,7 @@ case "$1" in
 	$SHWP ;;
 
 "vhalfr") winssp \
-	$(( PADDING_LEFT + GAPS + ( SWWP - GAPS ) / 2 + GAPS )) \
+	$(( PADDING_LEFT + ( SWWP + 3 * GAPS ) / 2 )) \
 	$(( PADDING_TOP  + GAPS )) \
 	$(( ( SWWP - GAPS ) / 2 )) \
 	$SHWP ;;
