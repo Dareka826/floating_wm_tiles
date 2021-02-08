@@ -137,21 +137,21 @@ case "$1" in
 "3vgridl") winssp \
 	$(( PADDING_LEFT + GAPS )) \
 	$(( PADDING_TOP  + GAPS )) \
-	$(( ( SWWP - 2 * GAPS ) / 3 ))
+	$(( ( SWWP - 2 * GAPS ) / 3 )) \
 	$SHWP ;;
 
 # 3-grid vertical middle
 "3vgridm") winssp \
 	$(( PADDING_LEFT + 2 * GAPS + ( SWWP - 2 * GAPS ) / 3 )) \
 	$(( PADDING_TOP  + GAPS )) \
-	$(( ( SWWP - 2 * GAPS ) / 3 ))
+	$(( ( SWWP - 2 * GAPS ) / 3 )) \
 	$SHWP ;;
 
 # 3-grid vertical right
 "3vgridr") winssp \
 	$(( PADDING_LEFT + 3 * GAPS + 2 * ( SWWP - 2 * GAPS ) / 3 )) \
 	$(( PADDING_TOP  + GAPS )) \
-	$(( ( SWWP - 2 * GAPS ) / 3 ))
+	$(( ( SWWP - 2 * GAPS ) / 3 )) \
 	$SHWP ;;
 
 # +---+---+---+
